@@ -16,7 +16,7 @@ public class Main
 
     public static boolean isEvenWord(String word)
     {
-
+        // good check
         if(word == null){
             return false;
         }
@@ -32,12 +32,11 @@ public class Main
         if(newWord.contains(firstChar))
         {
             newWord = newWord.replaceFirst(firstChar, "");
+            return isEvenWord(newWord); // this makes a lot more semantic sense here and although the result will be the same this makes a huge difference when reading and adding on to the code
         }
         else{
             return false;
         }
-
-        return isEvenWord(newWord);
     }
-
+    // I like how clean and consice this is and your test cases
 }
